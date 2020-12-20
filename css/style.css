@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: rgb(112, 162, 255);
+  --section-bg-color: rgb(231, 231, 255);
+  --btn-color: rgb(0, 97, 216);
+  --active-btn-color: rgb(21, 18, 182);
+  --text-color: rgb(255, 255, 255);
+}
+
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++HEADER+++++++++++++++++++++++++++++++++++++++*/
+
+.header {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.headerTitle {
+  color: var(--text-color);
+}
+.headerMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.headerMenu__item {
+  background-color: var(--btn-color);
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.headerMenu__item:hover {
+  background-color: var(--active-btn-color);
+}
+.headerMenu__link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.active {
+  background-color: var(--active-btn-color);
+  font-weight: bold;
+  padding: 14px;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++MAIN+++++++++++++++++++++++++++++++++++++++*/
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  margin: 0 40px;
+  grid-gap: 10px;
+}
+.mainSection {
+  background-color: var(--section-bg-color);
+  padding: 20px;
+}
+#Sect1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#Sect2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.mainAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: rgb(236, 236, 236);
+}
+.mainAside__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  filter: grayscale(100%);
+  border-bottom: 1px solid rgb(175, 175, 175);
+  width: 80%;
+  height: 100px;
+  margin: 0 0 20px 0;
+}
+.mainAside__link:hover {
+  color: rgb(58, 103, 252);
+  filter: grayscale(0%);
+}
+.mainAside__img {
+  width: 20%;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++FOOTER+++++++++++++++++++++++++++++++++++++++*/
+
+.footer {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+}

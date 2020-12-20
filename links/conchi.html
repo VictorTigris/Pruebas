@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer Proyecto Básico</title>
+    <link rel="stylesheet" href="../css/normalice.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/conchiStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h2 class="headerTitle">ConchiBlog</h2>
+        <ul class="headerMenu">
+          <li class="headerMenu__item">
+            <a class="headerMenu__link" href="../index.html">Inicio</a>
+          </li>
+          <li class="headerMenu__item active">
+            <a class="headerMenu__link" href="./conchi.html">La Conchi</a>
+          </li>
+          <li class="headerMenu__item">
+            <a class="headerMenu__link" href="./tamadre.html">La Tamadre</a>
+          </li>
+          <li class="headerMenu__item">
+            <a class="headerMenu__link" href="./tupu.html">El Tupu</a>
+          </li>
+        </ul>
+      </header>
+      <main class="main">
+        <section id="Sect1" class="mainSection">
+          <h3>Productos</h3>
+          <article class="mainArticle">
+            <div class="mainArticle__imgHolder">
+              <img src="../images/products/baston-de-anciano.jpg" alt="" />
+            </div>
+            <h4 class="mainArticle__title">Bata de vieja</h4>
+            <p class="mainArticle__desc">
+              Prenda roñosa apta para toda viejita pederna. Confección personal
+              de Conchi.
+            </p>
+            <div class="priceHolder">
+              <div class="mainArticle__price"><span>25€</span></div>
+            </div>
+            <div class="btnHolder">
+              <input
+                type="button"
+                onclick="addChart(1)"
+                id="btn1"
+                value="Añadir al carro"
+              />
+            </div>
+          </article>
+          <article class="mainArticle">
+            <div class="mainArticle__imgHolder">
+              <img src="../images/products/descarga.jfif" alt="" />
+            </div>
+            <h4 class="mainArticle__title">Orinal de acero</h4>
+            <p class="mainArticle__desc">
+              No vuelvas a levantarte de la cama. Testeado por la misma Conchi.
+            </p>
+            <div class="priceHolder">
+              <div class="mainArticle__price"><span>30€</span></div>
+            </div>
+            <div class="btnHolder">
+              <input
+                type="button"
+                onclick="addChart(2)"
+                id="btn2"
+                value="Añadir al carro"
+              />
+            </div>
+          </article>
+          <article class="mainArticle">
+            <div class="mainArticle__imgHolder">
+              <img
+                src="../images/products/dentadura-postiza-quitar-poner.jpg"
+                alt=""
+              />
+            </div>
+            <h4 class="mainArticle__title">Dentadura postiza</h4>
+            <p class="mainArticle__desc">
+              Desde sopas a huesito de pollo, no hay límite. Vaso no incluído.
+            </p>
+            <div class="priceHolder">
+              <div class="mainArticle__price"><span>300€</span></div>
+            </div>
+            <div class="btnHolder">
+              <input
+                type="button"
+                onclick="addChart(3)"
+                id="btn3"
+                value="Añadir al carro"
+              />
+            </div>
+          </article>
+          <article class="mainArticle">
+            <div class="mainArticle__imgHolder">
+              <img src="../images/products/campana-pequena.jpg" alt="" />
+            </div>
+            <h4 class="mainArticle__title">Campanita rompe-huevo</h4>
+            <p class="mainArticle__desc">
+              Si querés un sandwich... agitala sin parar. Alguien va a llegar.
+            </p>
+            <div class="priceHolder">
+              <div class="mainArticle__price"><span>4€</span></div>
+            </div>
+            <div class="btnHolder">
+              <input
+                type="button"
+                onclick="addChart(4)"
+                id="btn4"
+                value="Añadir al carro"
+              />
+            </div>
+          </article>
+        </section>
+        <aside class="mainAside">
+          <h5>Carrito de compra</h5>
+          <div class="shopping">
+            <div class="shoppingItem" id="shopping__1">
+              <p class="shoppingTitle">Bata de vieja</p>
+              <div class="shoppingQuant">
+                <span>Cant.</span><br><input class="numberHolder" id="num1" type="number" readonly />
+              </div>
+              <div class="shoppingPrice">
+                <span>Subtotal</span
+                ><br><input class="numberHolder" id="price1" type="number" readonly />
+              </div>
+            </div>
+            <div class="shoppingItem" id="shopping__2">
+                <p class="shoppingTitle">Orinal</p>
+                <div class="shoppingQuant">
+                  <span>Cant.</span><br><input class="numberHolder" id="num2" type="number" readonly />
+                </div>
+                <div class="shoppingPrice">
+                  <span>Subtotal</span
+                  ><br><input class="numberHolder" id="price2" type="number" readonly />
+                </div>
+              </div>
+              <div class="shoppingItem" id="shopping__3">
+                <p class="shoppingTitle">Dentadura</p>
+                <div class="shoppingQuant">
+                  <span>Cant.</span><br><input class="numberHolder" id="num3" type="number" readonly />
+                </div>
+                <div class="shoppingPrice">
+                  <span>Subtotal</span
+                  ><br><input class="numberHolder" id="price3" type="number" readonly />
+                </div>
+              </div>
+              <div class="shoppingItem" id="shopping__4">
+                <p class="shoppingTitle">Campanita</p>
+                <div class="shoppingQuant">
+                  <span>Cant.</span><br><input class="numberHolder" id="num4" type="number" readonly />
+                </div>
+                <div class="shoppingPrice">
+                  <span>Subtotal</span
+                  ><br><input class="numberHolder" id="price4" type="number" readonly />
+                </div>
+              </div>
+          </div>
+        </aside>
+      </main>
+      <footer class="footer">
+        <p class="footerText">TO.MA.CO &copy;</p>
+      </footer>
+    </div>
+    <script src="../function.js"></script>
+  </body>
+</html>
